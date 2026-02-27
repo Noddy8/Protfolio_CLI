@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aamir Nodhla - Portfolio (GUI & CLI)</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- MODE TOGGLE -->
+    <div class="mode-toggle">
+        <button class="toggle-btn active" data-mode="gui">🖥️ GUI</button>
+        <button class="toggle-btn" data-mode="cli">⌨️ CLI</button>
+    </div>
+
+    <!-- ==================== GUI MODE ==================== -->
+    <div id="gui-mode" class="gui-container">
+        <nav>
+            <div class="logo">Noddy's Portfolio</div>
+            <ul>
+                <li><a onclick="scrollToSection('about')">About</a></li>
+                <li><a onclick="scrollToSection('projects')">Projects</a></li>
+                <li><a onclick="scrollToSection('experience')">Experience</a></li>
+                <li><a onclick="scrollToSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="gui-content">
+            <div class="container">
+                <!-- Hero -->
+                <section class="hero">
+                    <div>
+                        <h1>Hi, I'm <span class="gradient-text">Aamir Nodhla</span></h1>
+                        <p>Software Developer specializing in Android development with expertise in Kotlin, Java, and
+                            Firebase. Building educational technology solutions that make a real impact.</p>
+                        <div class="cta-buttons">
+                            <a href="mailto:workspace.aamir@gmail.com" class="btn btn-primary">Get In Touch</a>
+                            <a onclick="scrollToSection('projects')" class="btn btn-secondary">View My Work</a>
+                        </div>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <span>📧</span>
+                                <a href="mailto:workspace.aamir@gmail.com"
+                                    style="color: var(--text-muted); text-decoration: none;">workspace.aamir@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <span>📱</span>
+                                <a href="tel:+917621901553" style="color: var(--text-muted); text-decoration: none;">+91
+                                    76219 01553</a>
+                            </div>
+                            <div class="contact-item">
+                                <span>💻</span>
+                                <a href="https://github.com/Noddy8"
+                                    style="color: var(--text-muted); text-decoration: none;">GitHub: Noddy8</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-animation">
+                        <div class="floating-card">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="floating-card">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="floating-card">
+                            <i class="fas fa-database"></i>
+                        </div>
+                    </div>
+            </div>
+            </section>
+
+            <!-- About -->
+            <section id="about">
+                <h2>About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>I'm a motivated software developer with hands-on experience in Android development using
+                            Kotlin and Java. Currently pursuing my MCA at Sardar Patel University, I combine
+                            technical expertise with practical project delivery and creative problem-solving.</p>
+                        <p>My passion lies in building educational technology solutions that make learning more
+                            engaging and accessible. I have a proven track record of delivering projects on time,
+                            collaborating with teams, and continuously expanding my skill set through real-world
+                            experience and certifications.</p>
+                        <p>When I'm not coding, I enjoy creating engaging video content and exploring the
+                            intersection of technology and education.</p>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--text-light); margin-bottom: 2rem;">Core Competencies</h3>
+                        <div class="skills-list">
+                            <div class="skill-category">
+                                <h4>Mobile Development</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Android</span>
+                                    <span class="skill-tag">Kotlin</span>
+                                    <span class="skill-tag">MVVM</span>
+                                    <span class="skill-tag">Firebase</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Programming</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">Java</span>
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">SQL</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Web Development</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Django</span>
+                                    <span class="skill-tag">HTML</span>
+                                    <span class="skill-tag">CSS</span>
+                                    <span class="skill-tag">REST APIs</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Tools & Platforms</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Git</span>
+                                    <span class="skill-tag">GitHub</span>
+                                    <span class="skill-tag">VS Code</span>
+                                    <span class="skill-tag">Gradle</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects -->
+            <section id="projects">
+                <h2>Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <span class="project-tag">MAJOR PROJECT</span>
+                        <h3>Islamic Literature Mobile App</h3>
+                        <p>Comprehensive Android application designed to make Islamic literature accessible and
+                            engaging for modern users, especially younger audiences.</p>
+                        <p style="font-size: 0.9rem; color: var(--accent);">Key Features: Authentication, Story
+                            View, Digital Library, Bookmarks, Notes</p>
+                        <div class="tech-stack">
+                            <span class="tech">Kotlin</span>
+                            <span class="tech">Android Studio</span>
+                            <span class="tech">Firebase</span>
+                            <span class="tech">Room DB</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <span class="project-tag">TEAM PROJECT</span>
+                        <h3>QuizBot - Interactive Quiz Platform</h3>
+                        <p>Web application for creating, hosting, and managing quizzes with real-time participant
+                            performance tracking.</p>
+                        <p style="font-size: 0.9rem; color: var(--accent);">Full-stack development with system
+                            design and testing</p>
+                        <div class="tech-stack">
+                            <span class="tech">Python</span>
+                            <span class="tech">Django</span>
+                            <span class="tech">JavaScript</span>
+                            <span class="tech">SQLite</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <span class="project-tag">MINOR PROJECT</span>
+                        <h3>LearnMe - Video Learning Platform</h3>
+                        <p>Android application for video-based course learning with intuitive course management and
+                            navigation.</p>
+                        <p style="font-size: 0.9rem; color: var(--accent);">Focus on user experience and course
+                            organization</p>
+                        <div class="tech-stack">
+                            <span class="tech">Kotlin</span>
+                            <span class="tech">Android Studio</span>
+                            <span class="tech">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience -->
+            <section id="experience">
+                <h2>Experience & Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Software Developer Intern</h3>
+                        <div class="role">GraspHopp Pvt Ltd</div>
+                        <div class="date">April 2025 – May 2025 | Onsite</div>
+                        <p>Developed Python scripts and worked with Android SDK for gamified educational application
+                            development. Contributed to JSON data management for curriculum gamification platform.
+                        </p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Video Editor & Content Creator</h3>
+                        <div class="role">Fusion of Wisdom</div>
+                        <div class="date">Aug 2024 – Aug 2025 | Part-time, Virtual</div>
+                        <p>Edited videos for religious content creator, enhanced video quality with advanced editing
+                            techniques. Designed eye-catching thumbnails for YouTube.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Master of Computer Applications (MCA)</h3>
+                        <div class="role">Sardar Patel University of Vidyanagar</div>
+                        <div class="date">Aug 2025 – April 2027</div>
+                        <p>Advanced studies in computer applications with focus on software development and emerging
+                            technologies. 2nd Semester Started.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3>Bachelor of Computer Applications (BCA)</h3>
+                        <div class="role">Maharaja Sayajirao University of Baroda</div>
+                        <div class="date">Aug 2022 – April 2025</div>
+                        <p>CGPA: 6.77/10 | Comprehensive education in computer applications, software development,
+                            and database management.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section id="contact">
+                <h2>Let's Work Together</h2>
+                <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                    <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.1rem;">I'm always
+                        interested in hearing about new projects and opportunities. Feel free to reach out!</p>
+                    <div class="cta-buttons" style="justify-content: center;">
+                        <a href="mailto:workspace.aamir@gmail.com" class="btn btn-primary">Send Me an Email</a>
+                        <a href="https://github.com/Noddy8" class="btn btn-secondary">View GitHub</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Aamir Nodhla. All rights reserved.</p>
+    </footer>
+    </div>
+
+    <!-- ==================== CLI MODE ==================== -->
+    <div id="cli-mode" class="cli-container hidden">
+        <div class="cli-content" id="cli-content"></div>
+        <div class="input-line">
+            <span class="prompt">→ $</span>
+            <input type="text" id="input" spellcheck="false" autocomplete="off">
+            <span class="cursor"></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
