@@ -174,7 +174,12 @@ learning more accessible and engaging for everyone.</span>`,
             div.className = 'output';
             div.innerHTML = text;
             cliContent.appendChild(div);
-            cliMode.scrollTop = cliMode.scrollHeight;
+            
+            // Smooth scroll to bottom with a small delay to ensure DOM update
+            setTimeout(() => {
+                cliMode.scrollTop = cliMode.scrollHeight;
+                div.scrollIntoView({ behavior: 'smooth', block: 'end' });
+            }, 0);
         }
 
         function executeCLICommand(cmd) {
